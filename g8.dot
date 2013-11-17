@@ -1,0 +1,12 @@
+digraph G {
+    graph [rankdir = "LR"];
+    node [shape = "ellipse", fontcolor="gray", color = "gray"] master branch1;
+    node [shape = "circle", fontcolor="black", color = "black"];
+
+    c0 -> c1 -> c2 -> c3 -> c4 -> c5 -> c6;
+    c3 -> c7 [label = "git checkout -b branch1", fontcolor = "gray"];
+    c7 -> c8 -> c9;
+
+    master -> c4 [color = "gray"];
+    branch1 -> c7 [color = "gray"];
+}
