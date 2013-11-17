@@ -1,0 +1,16 @@
+digraph G{
+	a -> b -> c;
+	b -> d;
+
+	/* 形状为多边形，边数为5，外框为3条，颜色为淡蓝，样式为填充 */
+	a [shape = polygon, sides = 5, peripheries = 3, color = lightblue, style = filled];
+
+	/* 形状为多边形，边数为4，角的倾斜度为0.4，内容为hellow world*/
+	c [shape = polygon, sides = 4, skew = 0.4, label = "hello world"];
+
+	/* 形状为倒三角，整体旋转30度 */
+	d [shape = invtriangle,orientation = 30];
+
+	/* 形状为多边形，边数为4，扭曲度为0.7 */
+	e [shape = polygon, sides = 4, distortion = 0.7];
+}

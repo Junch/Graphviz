@@ -1,0 +1,19 @@
+digraph G {
+	label = "Binary search tree";
+	node [shape = record];
+
+	A [label = "<f0>|<f1>A|<f2>"];
+	B [label = "<f0>|<f1>B|<f2>"];
+	C [label = "<f0>|<f1>C|<f2>"];
+	D [label = "<f0>|<f1>D|<f2>"];
+	E [label = "<f0>|<f1>E|<f2>"];
+	F [label = "<f0>|<f1>F|<f2>"];
+	G [label = "<f0>|<f1>G|<f2>"];
+
+	A:f0 -> B:f1;
+	A:f2 -> C:f1;
+	B:f0 -> D:f1;
+	B:f2 -> E:f1;
+	C:f0 -> F:f1;
+	C:f2 -> G:f1;
+}
