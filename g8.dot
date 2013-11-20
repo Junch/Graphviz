@@ -1,5 +1,5 @@
 digraph G {
-    graph [rankdir = "LR"];
+    rankdir = LR;
     node [shape = "ellipse", fontcolor="gray", color = "gray"] master branch1;
     node [shape = "circle", fontcolor="black", color = "black"];
 

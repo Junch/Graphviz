@@ -164,7 +164,7 @@ digraph G{
 ###例子8
 ```
 digraph G {
-    graph [rankdir = "LR"];
+    rankdir = LR;
     node [shape = "ellipse", fontcolor="gray", color = "gray"] master branch1;
     node [shape = "circle", fontcolor="black", color = "black"];
 
@@ -177,3 +177,30 @@ digraph G {
 }
 ```
 ![image](g8.png)
+
+###例子9
+```
+digraph G {
+	label = "Merge Sort";
+    node [shape = box, style=rounded]
+   
+    node0 [label="4  2  5  3"];
+    node1 [label="4  2"];
+    node2 [label="5  3"];
+    node3 [label="4"];
+    node4 [label="2"];
+    node5 [label="5"];
+    node6 [label="3"];
+    node0 -> node1;  node0 -> node2;
+    node1 -> node3;  node1 -> node4;
+    node2 -> node5;  node2 -> node6;
+
+    node7 [label="2  4"];
+    node8 [label="3  5"];
+    node9 [label="2  3  4  5"];
+    node3 -> node7; node4 -> node7;
+    node5 -> node8; node6 -> node8;
+    node7 -> node9; node8 -> node9;
+}
+```
+![image](mergesort.png)
