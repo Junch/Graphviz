@@ -204,3 +204,32 @@ digraph G {
 }
 ```
 ![image](mergesort.png)
+
+###例子10
+```
+digraph G {   
+    node[shape=record]   
+
+    {rank=same;Context;Strategy}
+
+    Context[label="{Context| +strategy : Strategy\l| +contextInterface()\l}"]
+    docs [ style="filled", color="gold", label="Strategy AlgorithmInterface()"]
+    edge [ arrowhead="none", style="dashed"]
+
+    Context->docs
+    Strategy[ label="{Strategy|\l|+algorithmInterface()\l}"]   
+    ca[label="{ConcreteStrategyA|\l+algorithmInterface()\l}"]   
+    cb[label="{ConcreteStrategyB|\l+algorithmInterface()\l}"]   
+    cc[label="{ConcreteStrategyC|\l+algorithmInterface()\l}"]   
+
+    edge[ arrowhead="odiamond", style="filled"]
+    Strategy -> Context 
+    edge[ arrowhead="onormal", style="filled"]
+    {rank=same;ca;cb;cc;docs}
+    ca->Strategy  
+    cb->Strategy 
+    cc->Strategy
+}
+
+```
+![image](uml1.png)
